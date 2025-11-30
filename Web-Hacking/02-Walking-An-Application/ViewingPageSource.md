@@ -41,7 +41,7 @@ In this room the main focus is to manually find the clues and hints in the websi
 ## [Viewing The Page Source]
 
 ## Initial Page View
-![alt text](image.png)
+![alt text](images/image.png)
 
 **Findings**
 
@@ -58,9 +58,9 @@ Visiting this page reveals the flag:
 -->`
 
 ## THM-Web-Framework Site
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
+![alt text](images/image-1.png)
+![alt text](images/image-2.png)
+![alt text](images/image-3.png)
 
 **Findings**
 
@@ -83,7 +83,7 @@ Along with credentials:
 
 Logging in using these credentials gives another flag.
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 ## Directory Searching 
 For the last flag it takes me a much more time than others flags
@@ -94,7 +94,7 @@ but could not find any clue
 While checking linked files, I clicked on a `style.css` reference and noticed it was located inside an `assets` directory.
 when Navigating to:this directory i see multiple static files 
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 Inside this directory, there is a file named **flag.txt**
 
@@ -109,12 +109,12 @@ Opening it reveals the final flag
 
 The first two articles are readable, but the third has been blocked with a floating notice above the content stating you have to be a premium customer to view the article.
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 If you come from a computer science or development background, you might already know that we often use browser developer tools to analyze, inspect, and modify elements of a web page live — without needing to open a code editor.
 
 When you hover over the notice block using the browser inspector (the hover/select arrow tool)
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 You’ll see that it’s a <div> element whose CSS display property is set to block.
 If you change that property to:
@@ -123,7 +123,7 @@ If you change that property to:
 
 the notice block becomes hidden — and the flag underneath it becomes visible.
 
-![alt text](image-8.png)  
+![alt text](images/image-8.png)  
 
 
 
@@ -189,7 +189,7 @@ To freeze this flash message on the screen, we need to pause JavaScript executio
 
 - element.remove(); or parent.removeChild(div);
 
-![alt text](image-11.png)
+![alt text](images/image-11.png)
 
 Click the line number to set a breakpoint.
 
@@ -251,4 +251,4 @@ This is the request the browser sends to the server when the contact form is sub
 
 This flag is not shown on the visible web page — it only appears in the server’s raw response, which is why checking the Network panel is essential.
 
-![alt text](image-12.png)
+![alt text](images/image-12.png)
